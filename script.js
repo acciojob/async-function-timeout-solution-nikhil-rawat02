@@ -10,5 +10,7 @@ async function showMessage() {
   await new Promise((resolve) => setTimeout(resolve, delayVal));
   output.innerText = message;
 }
-
+showMessage().then(()=>{
+	output.innerHTML = text.value;
+});
 btn.addEventListener("click", showMessage);
